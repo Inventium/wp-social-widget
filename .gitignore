@@ -10,3 +10,4 @@ doc/app
 *~
 coverage.data
 .DS_Store
+.project

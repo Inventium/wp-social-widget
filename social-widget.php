@@ -1,50 +1,44 @@
 <?php
 /*
- * Plugin name: Demo Plugin Widget
- * Plugin URI: http://website-in-a-weekend.net/plugins/demo-plugins/
+ * Plugin name: Wiaw Social Media Plugin Widget
+ * Plugin URI: http://website-in-a-weekend.net/
  * Description: Demonstrating how to add a WordPress widget with a plugin.
  * Version: 0.1
  * Author: Dave Doolin
  * Author URI: http://website-in-a-weekend.net/
  */
 
-$css_url = WP_PLUGIN_URL.'/demo-plugin-widget/css/demowidget.css';
-$css_file = WP_PLUGIN_DIR.'/demo-plugin-widget/css/demowidget.css';
+$sm_copy = <<<EOF
+<p>
+SOCIAL MEDIA CODE
+GOES HERE.
+</p>
+EOF;
+
+$css_url = WP_PLUGIN_URL.'/wp-social-widget/css/sm.css';
+$css_file = WP_PLUGIN_DIR.'/wp-social-widget/css/sm.css';
 
 if (file_exists($css_file)) {
-	wp_register_style('dw_stylesheet', $css_url);
-	wp_enqueue_style('dw_stylesheet');
+	wp_register_style('sm_stylesheet', $css_url);
+	wp_enqueue_style('sm_stylesheet');
 }
 
-if (!class_exists("demo_plugin_widget")) {
+if (!class_exists("sm_plugin_widget")) {
 
-	class demo_plugin_widget extends WP_Widget {
+	class sm_plugin_widget extends WP_Widget {
 			
-		function demo_plugin_widget() {
-			$widget_ops = array('classname' => 'widget_rss_links', 'description' => 'Your Global Status' );
-			$this->WP_Widget('rss_links', 'Status Star', $widget_ops);
+		function sm_plugin_widget() {
+			$widget_ops = array('classname' => 'widget_sm_links', 'description' => 'WiaW Social Media' );
+			$this->WP_Widget('sm_links', 'WiaW Social Media', $widget_ops);
 		}
 
-		/* This function doesn't work.
-		 * Keep it around for later, it will
-		 * be handy for refactoring.
-		 */
-		function status_buttons() {
-			?>
-<ul class="statustar">
-	<li>R</li>
-	<li>|</li>
-	<li>Y</li>
-	<li>|</li>
-	<li>G</li>
-</ul>
-			<?php
-		}
+		
 
 		/* This is the code that gets displayed on the UI side,
 		 * what readers see.
 		 */
 		function widget($args, $instance) {
+		   global $sm_copy;
 			extract($args, EXTR_SKIP);
 
 			echo $before_widget;
@@ -55,26 +49,9 @@ if (!class_exists("demo_plugin_widget")) {
 			if (!empty($title)) { 
 				echo $before_title . $title . $after_title; 
 			}
-			?>
 
-<form name="statusform" method="POST"><?php
-if ( $_REQUEST['save'] ) {
-
-	$status = $_POST['status'];
-	print $status;
-}
-?>
-<ul class="statustar">
-	<li><input type="radio" name="status" value="R"> R</li>
-	<li>|</li>
-	<li><input type="radio" name="status" value="Y"> Y</li>
-	<li>|</li>
-	<li><input type="radio" name="status" value="G" checked> G</li>
-</ul>
-<input type="submit" name="save" value="Save Options &raquo;" /></form>
-
-<?php
-            echo $after_widget;
+         echo $sm_copy;
+         echo $after_widget;
 		}
 
 		function update($new_instance, $old_instance) {
@@ -110,12 +87,12 @@ for entry feed: <input class="widefat"
 	}
 
 	function demo_widget_init() {
-		register_widget('demo_plugin_widget');
+		register_widget('sm_plugin_widget');
 	}
 	add_action('widgets_init', 'demo_widget_init');
 
 }
 
-$wpdpd = new demo_plugin_widget();
+$wpdpd = new sm_plugin_widget();
 
 ?>

@@ -1,1 +1,48 @@
 /* The css code for the social media images goes here. */
+
+.sm-wiaw a {
+   display: block;
+   width: 32px;
+   height: 32px;
+}
+
+.sm-wiaw a#twitter {
+   background: url("images/twitter_rollover.png") no-repeat 0 0;
+   background-position: 0 -32px;
+}
+
+.sm-wiaw a#twitter:hover { 
+  background-position: 0 0px;
+}
+
+.sm-wiaw a#facebook {
+   background: url("images/facebook_rollover.png") no-repeat 0 0;
+   background-position: 0 -32px;
+}
+
+.sm-wiaw a#facebook:hover { 
+  background-position: 0 0px;
+}
+.sm-wiaw a#linkedin {
+   background: url("images/linked_rollover.png") no-repeat 0 0;
+   background-position: 0 -32px;
+}
+
+.sm-wiaw a#linkedin:hover { 
+  background-position: 0 0px;
+}
+
+.sm-wiaw a#rss {
+   background: url("images/rss_rollover.png") no-repeat 0 0;
+   background-position: 0 -32px;
+}
+
+.sm-wiaw a#rss:hover { 
+  background-position: 0 0px;
+}
+
+
+/* This is for text in the link */
+.sm-wiaw .rollover-text span {
+   display: none;
+}

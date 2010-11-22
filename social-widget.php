@@ -9,10 +9,27 @@
  */
 
 $sm_copy = <<<EOF
-<p>
-SOCIAL MEDIA CODE
-GOES HERE.
-</p>
+<table class="wiaw-social-media">
+<tr>
+
+<td class="twitter">
+<a id="twitter" href="#"><span>Follow on Twitter.</span></a>
+</td>
+
+<td class="facebook">
+<a id="facebook" href="#"><span>Join Website In A Weekend on Facebook.</span></a>
+</td>
+
+<td class="linkedin">
+<a id="linkedin" href="#"><span>Connect on LinkedIn.</span></a>
+</td>
+
+<td class="rss">
+<a id="rss" href="#"><span>Subscribe with RSS.</span></a>
+</td>
+
+</tr>
+</table>
 EOF;
 
 $css_url = WP_PLUGIN_URL.'/wp-social-widget/css/sm.css';

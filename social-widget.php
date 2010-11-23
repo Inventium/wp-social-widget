@@ -8,25 +8,28 @@
  * Author URI: http://website-in-a-weekend.net/
  */
 
+$images = WP_PLUGIN_URL.'/wp-social-widget/images/';
+
 $sm_copy = <<<EOF
 <table class="wiaw-social-media">
 <tr>
 
 <td class="twitter">
-<a id="twitter" href="http://twitter.com/websiteweekend"><span>Follow on Twitter.</span></a>
+<a id="twitter" href="http://twitter.com/websiteweekend"><img src="$images/social-icons-packed.png" alt="Twitter" name="Twitter" class="social_twitter"</a>
 </td>
 
 <td class="facebook">
-<a id="facebook" href="http://facebook.com/WebsiteInAWeekend"><span>Join Website In A Weekend on Facebook.</span></a>
+<a id="facebook" href="http://facebook.com/WebsiteInAWeekend"><img src="$images/social-icons-packed.png" alt="Facebook" name="Facebook" class="social_facebook"</a>
 </td>
 
 <td class="linkedin">
-<a id="linkedin" href="http://linkedin.com/in/davidmdoolin"><span>Connect on LinkedIn.</span></a>
+<a id="linkedin" href="http://linkedin.com/in/davidmdoolin"><img src="$images/social-icons-packed.png" alt="Linkedin" name="Linkedin" class="social_linkedin"</a>
 </td>
 
 <td class="rss">
-<a id="rss" href="http://website-in-a-weekend.net/feed/"><span>Subscribe with RSS.</span></a>
+<a id="rss" href="http://website-in-a-weekend.net/feed"><img src="$images/social-icons-packed.png" alt="RSS" name="RSS" class="social_rss"</a>
 </td>
+
 
 </tr>
 </table>

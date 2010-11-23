@@ -1,48 +1,99 @@
 /* The css code for the social media images goes here. */
 
-.sm-wiaw a {
-   display: block;
-   width: 32px;
-   height: 32px;
+
+.wiaw-social-media tr{
+   position: relative;
+   width: 64px;
+   height: 64px;
 }
 
-.sm-wiaw a#twitter {
-   background: url("images/sm_rollover.png") no-repeat 0 0;
-   background-position: 0 -32px;
+.wiaw-social-media td{
+   width: 64px;
+   height: 64px;
 }
 
-.sm-wiaw a#twitter:hover { 
-  background-position: 0 0px;
+.wiaw-social-media a{
+   display:block;
+   position: relative;
+   width: 64px;
+   height: 64px;
 }
 
-.sm-wiaw a#facebook {
-   background: url("images/sm_rollover.png") no-repeat 0 0;
-   background-position: 33px -32px;
-}
-
-.sm-wiaw a#facebook:hover { 
-  background-position: 33px 0px;
-}
-.sm-wiaw a#linkedin {
-   background: url("images/sm_rollover.png") no-repeat 0 0;
-   background-position: 65px -32px;
-}
-
-.sm-wiaw a#linkedin:hover { 
-  background-position: 65px 0px;
-}
-
-.sm-wiaw a#rss {
-   background: url("images/sm_rollover.png") no-repeat 0 0;
-   background-position: 97 -32px;
-}
-
-.sm-wiaw a#rss:hover { 
-  background-position: 97 0px;
+.wiaw-social-media a twitter{
+   position: relative;
+   height: 64px;
 }
 
 
-/* This is for text in the link */
-.sm-wiaw .rollover-text span {
-   display: none;
+/* twitter */
+a .social_twitter{
+   clip:rect(0px 64px 64px 0px);
+   position: absolute;
+   left:0px;
 }
+
+a:hover .social_twitter{
+   clip:rect(64px 64px 128px 0px);
+   position: absolute;
+   top: -64px;
+   left:0px;
+}
+
+/* facebook */
+a .social_facebook{
+   clip:rect(0px 128px 64px 64px);
+   position: absolute;
+   left:-64px;
+}
+
+a:hover .social_facebook{
+   clip:rect(64px 128px 128px 64px);
+   position: absolute;
+   top: -64px;
+   left:-64px;
+}
+
+/* linkedin */
+a .social_linkedin{
+   clip:rect(0px 192px 64px 128px);
+   position: absolute;
+   left:-128px;
+}
+
+a:hover .social_linkedin{
+   clip:rect(64px 192px 128px 128px);
+   position: absolute;
+   top: -64px;
+   left:-128px;
+}
+
+/* linkedin */
+a .social_linkedin{
+   clip:rect(0px 192px 64px 128px);
+   position: absolute;
+   left:-128px;
+}
+
+a:hover .social_linkedin{
+   clip:rect(64px 192px 128px 128px);
+   position: absolute;
+   top: -64px;
+   left:-128px;
+}
+
+/* rss */
+a .social_rss{
+   clip:rect(0px 256px 64px 192px);
+   position: absolute;
+   left:-192px;
+}
+
+a:hover .social_rss{
+   clip:rect(64px 256px 128px 192px);
+   position: absolute;
+   top: -64px;
+   left:-192px;
+}
+
+
+
